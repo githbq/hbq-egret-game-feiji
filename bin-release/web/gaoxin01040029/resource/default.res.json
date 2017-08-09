@@ -1,0 +1,246 @@
+{
+  "resources": [
+    {
+      "name": "itemsPngV1",
+      "type": "image",
+      "url": "assets/itemsV1.png"
+    },
+    {
+      "name": "itemsPngV2",
+      "type": "image",
+      "url": "assets/itemsV2.png"
+    },
+    {
+      "name": "itemsPngV3",
+      "type": "image",
+      "url": "assets/itemsV3.png"
+    },
+    {
+      "name": "itemsPngV4",
+      "type": "image",
+      "url": "assets/itemsV4.png"
+    },
+    {
+      "name": "itemsPngV5",
+      "type": "image",
+      "url": "assets/itemsV5.png"
+    },
+    {
+      "name": "itemsPngV6",
+      "type": "image",
+      "url": "assets/itemsV6.png"
+    },
+    {
+      "name": "itemsPngV7",
+      "type": "image",
+      "url": "assets/itemsV7.png"
+    },
+    {
+      "name": "itemsPngV8",
+      "type": "image",
+      "url": "assets/itemsV8.png"
+    },
+    {
+      "name": "mainPng",
+      "type": "image",
+      "url": "assets/main.min.png"
+    },
+    {
+      "name": "itemsV1",
+      "type": "sheet",
+      "url": "assets/itemsV1.json"
+    },
+    {
+      "name": "itemsV2",
+      "type": "sheet",
+      "url": "assets/itemsV2.json"
+    },
+    {
+      "name": "itemsV3",
+      "type": "sheet",
+      "url": "assets/itemsV3.json"
+    },
+    {
+      "name": "itemsV4",
+      "type": "sheet",
+      "url": "assets/itemsV4.json"
+    },
+    {
+      "name": "itemsV5",
+      "type": "sheet",
+      "url": "assets/itemsV5.json"
+    },
+    {
+      "name": "itemsV6",
+      "type": "sheet",
+      "url": "assets/itemsV6.json"
+    },
+    {
+      "name": "itemsV7",
+      "type": "sheet",
+      "url": "assets/itemsV7.json"
+    },
+    {
+      "name": "itemsV8",
+      "type": "sheet",
+      "url": "assets/itemsV8.json"
+    },
+    {
+      "name": "main",
+      "type": "sheet",
+      "url": "assets/main.json"
+    },
+    {
+      "name": "1V1_亚洲_中国_北京_6351km",
+      "type": "image",
+      "url": "assets/backgrounds/1V1_亚洲_中国_北京_6351km.png"
+    },
+    {
+      "name": "1V2_亚洲_韩国_首尔_1658km",
+      "type": "image",
+      "url": "assets/backgrounds/1V2_亚洲_韩国_首尔_1658km.png"
+    },
+    {
+      "name": "1V3_亚洲_日本_东京_2440km",
+      "type": "image",
+      "url": "assets/backgrounds/1V3_亚洲_日本_东京_2440km.png"
+    },
+    {
+      "name": "1V4_亚洲_阿拉伯_迪拜_2009km",
+      "type": "image",
+      "url": "assets/backgrounds/1V4_亚洲_阿拉伯_迪拜_2009km.png"
+    },
+    {
+      "name": "1V6_亚洲_印度_孟买_1834km",
+      "type": "image",
+      "url": "assets/backgrounds/1V6_亚洲_印度_孟买_1834km.png"
+    },
+    {
+      "name": "1V8_亚洲_马来西亚_吉隆坡_3545km",
+      "type": "image",
+      "url": "assets/backgrounds/1V8_亚洲_马来西亚_吉隆坡_3545km.png"
+    },
+    {
+      "name": "1V5_亚洲_印度尼西亚_雅加达_2562km",
+      "type": "image",
+      "url": "assets/backgrounds/1V5_亚洲_印度尼西亚_雅加达_2562km.png"
+    },
+    {
+      "name": "1V7_亚洲_蒙古_乌兰巴托_2380km",
+      "type": "image",
+      "url": "assets/backgrounds/1V7_亚洲_蒙古_乌兰巴托_2380km.png"
+    },
+    {
+      "name": "1V9_亚洲_泰国_曼谷_2288km",
+      "type": "image",
+      "url": "assets/backgrounds/1V9_亚洲_泰国_曼谷_2288km.png"
+    },
+    {
+      "name": "2V10_欧洲_俄罗斯_莫斯科_4006km",
+      "type": "image",
+      "url": "assets/backgrounds/2V10_欧洲_俄罗斯_莫斯科_4006km.png"
+    },
+    {
+      "name": "2V1_欧洲_西班牙_巴塞罗那_3432km",
+      "type": "image",
+      "url": "assets/backgrounds/2V1_欧洲_西班牙_巴塞罗那_3432km.png"
+    },
+    {
+      "name": "2V11_欧洲_瑞典_斯德哥尔摩_7534km",
+      "type": "image",
+      "url": "assets/backgrounds/2V11_欧洲_瑞典_斯德哥尔摩_7534km.png"
+    },
+    {
+      "name": "2V2_欧洲_瑞士_日内瓦_3375km",
+      "type": "image",
+      "url": "assets/backgrounds/2V2_欧洲_瑞士_日内瓦_3375km.png"
+    },
+    {
+      "name": "2V3_欧洲_德国_慕尼黑_3235km",
+      "type": "image",
+      "url": "assets/backgrounds/2V3_欧洲_德国_慕尼黑_3235km.png"
+    },
+    {
+      "name": "2V5_欧洲_奥地利_维也纳_6074km",
+      "type": "image",
+      "url": "assets/backgrounds/2V5_欧洲_奥地利_维也纳_6074km.png"
+    },
+    {
+      "name": "2V4_欧洲_丹麦_哥本哈根_6074km",
+      "type": "image",
+      "url": "assets/backgrounds/2V4_欧洲_丹麦_哥本哈根_6074km.png"
+    },
+    {
+      "name": "2V6_欧洲_法国_巴黎_5206km",
+      "type": "image",
+      "url": "assets/backgrounds/2V6_欧洲_法国_巴黎_5206km.png"
+    },
+    {
+      "name": "2V7_欧洲_英国_伦敦_5281km",
+      "type": "image",
+      "url": "assets/backgrounds/2V7_欧洲_英国_伦敦_5281km.png"
+    },
+    {
+      "name": "2V8_欧洲_希腊_雅典_4521km",
+      "type": "image",
+      "url": "assets/backgrounds/2V8_欧洲_希腊_雅典_4521km.png"
+    },
+    {
+      "name": "2V9_欧洲_意大利_罗马_4212km",
+      "type": "image",
+      "url": "assets/backgrounds/2V9_欧洲_意大利_罗马_4212km.png"
+    },
+    {
+      "name": "3V1_非洲_南非_约堡_4186km",
+      "type": "image",
+      "url": "assets/backgrounds/3V1_非洲_南非_约堡_4186km.png"
+    },
+    {
+      "name": "4V1_美洲_加拿大_温哥华_3863km",
+      "type": "image",
+      "url": "assets/backgrounds/4V1_美洲_加拿大_温哥华_3863km.png"
+    },
+    {
+      "name": "4V2_美洲_美国_纽约_3460km",
+      "type": "image",
+      "url": "assets/backgrounds/4V2_美洲_美国_纽约_3460km.png"
+    },
+    {
+      "name": "4V3_美洲_古巴_哈瓦那_5676km",
+      "type": "image",
+      "url": "assets/backgrounds/4V3_美洲_古巴_哈瓦那_5676km.png"
+    },
+    {
+      "name": "4V4_美洲_巴西_圣保罗_3190km",
+      "type": "image",
+      "url": "assets/backgrounds/4V4_美洲_巴西_圣保罗_3190km.png"
+    },
+    {
+      "name": "5V2_澳洲_澳大利亚_5519km",
+      "type": "image",
+      "url": "assets/backgrounds/5V2_澳洲_澳大利亚_5519km.png"
+    },
+    {
+      "name":"bgSound",
+      "type":"sound",
+      "soundType":"music",
+      "url":"assets/sound/bg.mp3"
+    },
+    {
+      "name":"paopoSound",
+      "type":"sound",
+      "soundType":"effect",
+      "url":"assets/sound/paopo.mp3"
+    }
+  ],
+  "groups": [
+    {
+      "name": "backgrounds",
+      "keys": "1V1_亚洲_中国_北京_6351km,1V2_亚洲_韩国_首尔_1658km,1V3_亚洲_日本_东京_2440km,1V4_亚洲_阿拉伯_迪拜_2009km,1V5_亚洲_印度尼西亚_雅加达_2562km,1V6_亚洲_印度_孟买_1834km,1V7_亚洲_蒙古_乌兰巴托_2380km,1V8_亚洲_马来西亚_吉隆坡_3545km,1V9_亚洲_泰国_曼谷_2288km,2V1_欧洲_西班牙_巴塞罗那_3432km,2V2_欧洲_瑞士_日内瓦_3375km,2V3_欧洲_德国_慕尼黑_3235km,2V4_欧洲_丹麦_哥本哈根_6074km,2V5_欧洲_奥地利_维也纳_6074km,2V6_欧洲_法国_巴黎_5206km,2V7_欧洲_英国_伦敦_5281km,2V8_欧洲_希腊_雅典_4521km,2V9_欧洲_意大利_罗马_4212km,2V10_欧洲_俄罗斯_莫斯科_4006km,2V11_欧洲_瑞典_斯德哥尔摩_7534km,3V1_非洲_南非_约堡_4186km,4V1_美洲_加拿大_温哥华_3863km,4V2_美洲_美国_纽约_3460km,4V3_美洲_古巴_哈瓦那_5676km,4V4_美洲_巴西_圣保罗_3190km,5V2_澳洲_澳大利亚_5519km"
+    },
+    {
+      "name": "preload",
+      "keys": "paopoSound,bgSound,itemsPngV1,itemsPngV2,itemsPngV3,itemsPngV4,itemsPngV5,itemsPngV6,itemsPngV7,itemsPngV8,mainPng,,itemsV1,itemsV2,itemsV3,itemsV4,itemsV5,itemsV6,itemsV7,itemsV8,main"
+    }
+  ]
+}

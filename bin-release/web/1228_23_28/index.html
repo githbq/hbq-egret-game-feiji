@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>环游世界80天</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <!--<meta name="viewport"
+         content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,target-densitydpi=device-dpi"/>-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+
+    <link rel="stylesheet" type="text/css" href="resource/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/bigmax.css"/>
+    <script type="text/javascript" src="resource/js/zepto.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="resource/js/index.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="resource/js/custom.js">
+ 
+    </script>
+</head>
+
+<body>
+	<div id='wx_pic' style='top:-1000px;position: absolute;'>
+		 
+	</div>
+	<div  id="preloading" style="width: 100%;height: 100%; background-color: #ef5553;">
+		<div class="loading">
+			<span class="h24">Loading...</span> 
+		</div>
+	</div>
+<!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
+<!--modules_files_start-->
+	<script egret="lib" src="libs/modules/egret/egret.min.js"></script>
+	<script egret="lib" src="libs/modules/egret/egret.web.min.js"></script>
+	<script egret="lib" src="libs/modules/game/game.min.js"></script>
+	<script egret="lib" src="libs/modules/game/game.web.min.js"></script>
+	<script egret="lib" src="libs/modules/tween/tween.min.js"></script>
+	<script egret="lib" src="libs/modules/res/res.min.js"></script>
+	<!--modules_files_end-->
+
+<!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
+<!--other_libs_files_start-->
+
+<!--other_libs_files_end-->
+
+<!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
+<!--game_files_start-->
+	<script src="main.min.js"></script>
+	<!--game_files_end-->
+<!-- data-scale-mode   [showAll,noScale,noBorder,exactFit,fixedWidth,fixedHeight]-->
+<div style="margin: auto;width:100%;height: 100%;" class="egret-player" data-entry-class="Main" data-orientation="auto" data-scale-mode="noBorder"
+     data-frame-rate="30" data-content-width="480" data-content-height="800" data-show-paint-rect="false" data-multi-fingered="2"
+     data-show-fps="false" data-show-log="true" data-log-filter="^egret" data-show-fps-style="x:0,y:0,size:30,textColor:0x00c200,bgAlpha:0.9">
+</div>
+
+<script>
+    egret.runEgret();
+    
+    var gameLayerDom=document.querySelectorAll('.egret-player')[0];
+    gameLayerDom.style.display="none";
+    var gameInstance = gameLayerDom['egret-player'];
+    var mainInstance = gameInstance.player.root;
+    mainInstance.whenLoadComplete = function () {
+    	document.getElementById("preloading").style.display = "none";
+        
+        var gameContainer = this.gameContainer;
+        window.c_startGame = function(){
+            gameContainer.gameReplay();
+            gameLayerDom.style.display="block";
+        }
+        airplane.init();
+        airplane.showSection('game_start');
+        window.c_gameLayer = $(".egret-player");
+
+        //游戏加载完后 执行
+        gameContainer.whenGameStart = function (data) {
+            // alert('whenGameStart');
+        }
+        gameContainer.whenGameStop = function (data,isWin) {
+            // alert('whenGameStop');
+            gameLayerDom.style.display="none";
+            //游戏结束调用方法
+            var config=gameContainer.getGameFinalData();
+//			config.station=998; //到达多少站  背景的数量
+//			config.point= 34221; //行驶的距离
+//			config.country="日本";//到达的国家
+//			config.city = "东京";//到达的城市
+            airplane.gameEnd(config);
+            if (isWin){
+                airplane.showWin();
+            }
+
+
+        }
+    }
+</script>
+
+<!--begin  mobile-->
+
+<section id="game_start" class="game_start" >
+    <h1 class="h34">环游世界80天</h1>
+    <div class="plan">
+        <span></span>
+    </div>
+    <h3 class="h20">和<i class="h28">最爱</i>的人<br/>来一次无国界的色彩之旅</h3>
+    <span class="buttonspan  h16 start" id="btnstart">开始游戏</span>
+    <span class="buttonspan  h16 paihang" id="btnscore">排行榜</span>
+    <img src="resource/images/start_logo.png"/>
+</section>
+<section id="game_paihang" class="game_paihang" style="display: none;">
+    <div class="paihang_bg"></div>
+    <div class="score">
+        <i id="score_close"></i>
+
+        <div class="title h28">
+            <s class="sl"></s>
+            <s class="sr"></s>
+            <span>排行榜</span>
+        </div>
+        <div class="content h14">
+            <ul id="ph_content">
+                <!--<li>
+                <img src="resource/images/ph_number1.png" class="img_number" />
+                <img src="resource/images/ph_photo.JPG" class="img_photo"/>
+                <span>这是一个很名的长字人人人</span>
+                <span>100000000米</span>
+                
+                </li>
+                <li><img src="resource/images/ph_number2.png" class="img_number">
+                <img src="resource/images/ph_photo.JPG" class="img_photo"/>
+                <span>小七2</span>
+                <span>1000米</span>
+               
+                </li>
+                <li><img src="resource/images/ph_number3.png" class="img_number">
+                <img src="resource/images/ph_photo.JPG" class="img_photo"/>
+                <span>小七3</span>
+                <span>1000米</span>
+                 
+                </li>
+                <li><img src="resource/images/ph_number.png" class="img_number">
+                <img src="resource/images/ph_photo.JPG" class="img_photo"/>
+                <span>小七4</span>
+                <span>1000米</span>
+                
+                </li>
+                <li><img src="resource/images/ph_number.png" class="img_number">
+                <img src="resource/images/ph_photo.JPG" class="img_photo"/>
+                <span>小七5</span>
+                <span>1000米</span>
+               
+                </li>
+                <li><img src="resource/images/ph_number.png" class="img_number">
+                <img src="resource/images/ph_photo.JPG" class="img_photo"/>
+                <span>小七6</span>
+                <span>1000米</span>
+               
+                </li>
+                <li><img src="resource/images/ph_number.png" class="img_number">
+                <img src="resource/images/ph_photo.JPG" class="img_photo"/>
+                <span>小七7</span>
+                <span>1000米</span>
+                
+                </li>
+                <li><img src="resource/images/ph_number.png" class="img_number">
+                <img src="resource/images/ph_photo.JPG" class="img_photo"/>
+                <span>小七8</span>
+                <span>1000米</span>
+                
+                </li>
+                <li><img src="resource/images/ph_number.png" class="img_number">
+                <img src="resource/images/ph_photo.JPG" class="img_photo"/>
+                <span>小七9</span>
+                <span>1000米</span>
+                 
+                </li>
+                <li><img src="resource/images/ph_number.png" class="img_number">
+                <img src="resource/images/ph_photo.JPG" class="img_photo"/>
+                <span>小七10</span>
+                <span>1000米</span>
+                 
+                </li>-->
+            </ul>
+        </div>
+    </div>
+
+</section>
+<section id="game_main" class="game_main" style="display: none;">
+    <div class="main_bar">
+        <div class="main_bar_top">
+            <span>中国</span>
+            <span>北京</span>
+            <i>0</i>
+            <span>km</span>
+
+        </div>
+        <div class="main_end">
+            <span class="main_bar_plain"><s></s></span>
+            <span class="main_bar_font h12">从你决定出发的那一刻起，世界就变得很小了。</span>
+        </div>
+    </div>
+
+    <div class="main_plan"></div>
+
+    <div class="main_footer">
+        <div class="main_jingju" id="main_go"></div>
+        <div class="main_hand">
+            <div class="main_hand_div">
+                <img src="resource/images/main_hand.png"/>
+            </div>
+            <div class="main_hand_font">
+                <h5 class="h20">左右倾斜飞机调整飞机方向</h5>
+                <h4 class="h16">吃道具可以增加航行时间哦~</h4>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section class="game_end" id="game_end" style="display: none;">
+    <div class="score">
+        <i></i>
+
+        <div class="title h28">
+            <s class="sl"></s>
+            <s class="sr"></s>
+            <span>新年快乐</span>
+        </div>
+        <div class="content h20" id="result_content">
+            <span>恭喜你达到第<s></s>站</span>
+            <span><s></s>&nbsp;&nbsp;&nbsp;<s></s></span>
+            <span>战胜<s></s>%的机长</span>
+            <span>本次航行距离:<s></s>km</span>
+            <span>最佳航行距离:<s></s>km</span>
+            <span>我的最佳排名:<s></s></span>
+
+        </div>
+    </div>
+    <div class="buttons">
+        <i class="h18"><span>关注我们查看获奖信息</span></i>
+        <i class="h18" id="end_ph"><span>排行榜</span></i>
+        <i class="h18" id="end_play"><span>再玩一次</span></i>
+    </div>
+</section>
+<!--end  mobile-->
+</body>
+
+</html>
